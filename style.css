@@ -63,10 +63,12 @@ body
 
 .leftContainer
 {
-    width:25%;
     display:inline-grid;
-    background-color: red;
+    background-color: #0ea5e9;
+    width:17%;
+    padding:20px;
     gap:25px;
+    color:white;
     grid-template-areas:
     "title title"
     "Box1 Box1"
@@ -87,9 +89,12 @@ body
 
 .Title
 {
+    display:flex;
     grid-area:title;
-    margin:10px;
     height:25px;
+    align-items: center;
+    gap:15px;
+    font-size:20px;
 }
 
 .usefulBox1
@@ -110,6 +115,25 @@ body
     flex-direction: column;
     gap:10px;
 }
+
+.listContainer
+{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.items
+{
+    display:flex;
+    flex-direction: row;
+    gap:16px;
+}
+
+.fa-user-group
+{
+    padding:10px 0px;
+}
+
 
 /*Ends here*/
 .rightContainer
