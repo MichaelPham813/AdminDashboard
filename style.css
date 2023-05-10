@@ -55,8 +55,10 @@ body
 {
     width:100%;
     height:100%;
-    display:flex;
-    flex-direction: row;
+    display:grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 20% 80%;
+
 }
 
 /* Left Container items */
@@ -65,10 +67,13 @@ body
 {
     display:inline-grid;
     background-color: #0ea5e9;
-    width:20%;
+    width:auto;
+    height:100%;
     padding:20px;
     gap:25px;
     color:white;
+    /* grid-area: left; */
+    grid-row: 1 / last-line;
     grid-template-areas:
     "title title"
     "Box1 Box1"
@@ -141,9 +146,13 @@ body
 .rightContainer
 {
     display:grid;
-    width:100%;
+    width:auto;
     height:100%;
-    grid-template-areas:
+    /* grid-row: 1 / last-line; */
+    grid-column: 2 / last-line;
+    grid-row: 1 / last-line;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-areas:
     "top top top top"
     "top top top top"
     "top top top top"
@@ -152,16 +161,90 @@ body
     "bottom bottom bottom bottom"
     "bottom bottom bottom bottom"
     "bottom bottom bottom bottom"
-    "bottom bottom bottom bottom"
+    "bottom bottom bottom bottom" */
+    
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30% 70%;
+     */
 }
 
 /* Top Container */
 .topContainer
 {
-    grid-area: top;
+    display:grid;
+    grid-row:1 / 2;
+    width: auto;
+    border:1px solid black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
+
+.searchGroup
+{
+    display:grid;
+    grid-column: 1/ last-line;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.topGroup
+{
+    display:grid;
+    grid-column:1/span 2;
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 50px;
+    grid-template-rows: 60px;
+    justify-items: center;
+    align-items: center;
+}
+input:focus
+{
+    outline:none;
+}
+.searchBar
+{
+    width:100%;
+    grid-column:2 / span 5;
+    height:25px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #e5e7eb;
+    border: none;
+    box-shadow: none;
+}
+
+
+.bottomGroup
+{
+    display:grid;
+    grid-template-columns: 25px 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px;
+    margin:0 auto;
+    text-align: center;
+    align-items: center;
+    gap:10px;
+}
+.adminPic
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+.adminName
+{
+    grid-column: 3 / span 6;
+    font-weight:500px;
+}
+
+.userGroup
+{
+    grid-column:1 / span 3;
+    grid-row: 2 / span 3;
+}
+
 /* Bottom Container */
 .bottomContainer
 {
-    grid-area:bottom;
+
 }
