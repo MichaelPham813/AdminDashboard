@@ -240,15 +240,17 @@ input:focus
 
 .userGroup
 {
-    grid-column:1 / span 3;
+    width:100%;
+    grid-column:1 / last-line;
     grid-row: 2 / span 3;
+    
 }
 
 .userName
 {
     display:grid;
-    gap:5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .textContainer
 {
@@ -276,6 +278,30 @@ input:focus
 .name
 {
     margin:5px 0px 0px 0px;
+}
+
+.optionGroup
+{
+    display:grid;
+    grid-template-columns: repeat(3,30%);
+    grid-column: 5/span 7;
+    align-items: center;
+    text-align: center;
+    gap:10px;
+}
+
+.optionBtn
+{
+    height:30%;
+    width:90%;
+    margin:0px auto;
+    background-color: #e5e7eb;
+    border: none;
+    box-shadow: none;
+    border-radius:15px;
+    background-color: #0ea5e9;
+    color:white;
+    cursor: pointer;
 }
 
 /* Bottom Container */
