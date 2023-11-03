@@ -56,6 +56,11 @@ body
     margin-bottom:0;
 }
 
+.descriptionText
+{
+    overflow:auto;
+}
+
 .Container
 {
     width:100%;
@@ -368,22 +373,54 @@ input:focus
     font-size:large;
 }
 
+/* TODO 
+Need to change the unit based on the resolution*/
 .projectsBox
 {
     display: grid;
-    padding:20px 15px;
+    position:relative;
+    gap:10px;
+    padding:25px 30px;
     margin: 0px 25px 0px 10px;
-    border:1px solid blue;
+    background-color: white;
+    background-image: linear-gradient(to right, #FFB122 2%, rgba(0,0,0,0) 2%);
     border-radius: 8px;
     grid-template-rows: 25px 95px;
+    box-shadow:  3px 2px 6px 1px #B6ABA7;
+    
 }
 
 .iconItems
 {
     display: flex;
-    position:relative;
+    /* position: absolute; */
+    margin-left:auto;
     flex-direction: row;
     gap: 25px;
     font-size: larger;
-    left:240px;
+    overflow:hidden;
+}
+
+.announcementContainer
+{
+    display:grid;
+}
+
+.announcementBox
+{
+    background-color: white;
+    border-radius:8px;
+    box-shadow:  3px 2px 6px 1px #B6ABA7;
+}
+.announcementsBox
+{
+    padding:20px 0px;
+    margin:0px 20px;
+}
+
+.announcementsBox:nth-child(2), .announcementsBox:nth-child(3)
+{
+    border-top: 3px solid rgb(226, 232, 240);
+    border-top-width: medium;
+    border-radius: 2px;
 }
