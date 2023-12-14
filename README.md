@@ -1,4 +1,4 @@
 # AdminDashboard
 Simple AdminDashboard
 
-[Live link](https://michaelpham813.github.io/AdminDashboard/)
+[https://michaelpham813.github.io/AdminDashboard/](Live Link)
